@@ -8,13 +8,18 @@ let showVideoPrincipal = ref(false);
 function visionFrame(e) {
   showVideo.value = e;
   showVideoSmall.value = false;
+  showVideoPrincipal.value = false;
 }
 function visionFrameSmall(e) {
   showVideoSmall.value = e;
+  showVideo.value = false;
+  showVideoPrincipal.value = false;
 }
 
 function visionFramePrincipal(e) {
   showVideoPrincipal.value = e;
+  showVideo.value = false;
+  showVideoSmall.value = false;
 }
 </script>
 
