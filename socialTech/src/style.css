@@ -1,0 +1,346 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --color: #00ffff;
+  --size: 8px;
+  --time: 1.2s;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #000;
+}
+
+/* header  section*/
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  margin: 3% 5%;
+  padding: 1rem;
+  color: white;
+  background-color: transparent;
+}
+
+/* main section */
+.main-container {
+  display: flex;
+  margin: 1% 5%;
+}
+
+/* left container */
+.left {
+  width: 50%;
+}
+
+.left img {
+  width: 100%;
+}
+
+
+/* right container */
+.right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-top {
+  display: flex;
+  height: 300px;
+  position: relative;
+}
+
+.right-bottom {
+  display: flex;
+  height: 300px;
+}
+
+.right-top-1,
+.right-top-2 {
+  width: 50%;
+}
+.right-bottom-1,
+.right-bottom-2 {
+  width: 50%;
+}
+
+.right-top-1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.right-top-1 i {
+  position: absolute;
+  top: 50%;
+  scale: 3;
+  color:#c60606
+}
+
+.right-top-2 .testo {
+  padding: 5% 5%;
+  height: 100%;
+  color: white;
+  position: relative;
+}
+.right-bottom-1 {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoYS1I7AOAkfljWhXx-E7yUZTDtf5CreayOA&s");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.right-bottom-2{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.right-bottom-2 i {
+  position: absolute;
+  top: 50%;
+  scale: 3;
+  color:#c60606
+}
+
+/* utils */
+.width-100 {
+  width: 100%;
+}
+
+.z-index-up {
+  z-index: 10000;
+}
+
+.margin-20{
+  margin: 20px;
+}
+
+
+/* iframe */
+.videoYoutube {
+  width: 50%;
+  background-color: black;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000000;
+}
+
+.videoYoutube .btn {
+  width: 77px;
+}
+
+/* neon elements  */
+.neon-border {
+  border: 3px solid rgb(0, 234, 234);
+  box-shadow: 0 0 1px #00eaea, 0 0 2px #00eaea, 0 0 6px #00eaea,
+    0 0 12px #00eaea, inset 0 0 1px #00eaea, inset 0 0 2px #00eaea,
+    inset 0 0 6px #00eaea, inset 0 0 12px #00eaea;
+}
+
+.neonText {
+  font-family: "FontAwesome";
+  color: #fff;
+  letter-spacing: 10px;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #00eaea,
+    0 0 82px #00eaea, 0 0 92px #00eaea, 0 0 102px #00eaea, 0 0 151px #00eaea;
+}
+
+#cyber-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.datastream {
+  display: flex;
+  gap: 8px;
+}
+
+.bar {
+  width: var(--size);
+  height: 60px;
+  background: var(--color);
+  filter: drop-shadow(0 0 10px var(--color));
+  animation: blink var(--time) infinite;
+}
+
+.bar-1 {
+  animation-delay: 0s;
+}
+.bar-2 {
+  animation-delay: 0.15s;
+}
+.bar-3 {
+  animation-delay: 0.3s;
+}
+.bar-4 {
+  animation-delay: 0.45s;
+}
+.bar-5 {
+  animation-delay: 0.6s;
+}
+.bar-6 {
+  animation-delay: 0.75s;
+}
+.bar-7 {
+  animation-delay: 0.9s;
+}
+.bar-8 {
+  animation-delay: 1.05s;
+}
+
+.loader-text {
+  margin-top: 20px;
+  color: var(--color);
+  font-family: monospace;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.1;
+    transform: scaleY(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1.2);
+  }
+  100% {
+    opacity: 0.1;
+    transform: scaleY(0.5);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+/* arrow click there */
+.arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+.arrow span {
+    display: block;
+    width: 1.5vw;
+    height: 1.5vw;
+    border-bottom: 5px solid rgb(0, 234, 234);
+    border-right: 5px solid rgb(0, 234, 234);
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+    animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+    animation-delay: -0.4s;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+
+
+
+/* flip card */
+
+.flip-card {
+  background-color: transparent;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+
+
+/* Style the back side */
+.flip-card-back {
+  display: flex;
+  justify-content: center;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back i {
+  position: absolute;
+  top: 50%;
+  scale: 3;
+  color:#c60606
+}
