@@ -2,10 +2,12 @@
 import { ref } from "vue";
 import SearchComponent from "./SearchComponent.vue";
 
+const emit = defineEmits(["miEvento"]);
 
 let showVideo = ref(false);
 let showVideoSmall = ref(false);
 let showVideoPrincipal = ref(false);
+let resultSearch = ref("2UCBbcBT5Es");
 
 function visionFrame(e) {
   showVideo.value = e;
@@ -23,10 +25,17 @@ function visionFramePrincipal(e) {
   showVideo.value = false;
   showVideoSmall.value = false;
 }
+
+function recibirDato(e) {
+  resultSearch.value = e;
+  showVideoPrincipal.value = true;
+  showVideo.value = false;
+  showVideoSmall.value = false;
+}
 </script>
 
 <template>
-    <SearchComponent></SearchComponent>
+  <SearchComponent @miEvento="recibirDato"></SearchComponent>
   <div v-if="showVideo" class="videoYoutube" style="margin-top: 20px">
     <button @click="visionFrame(false)" type="button" class="btn btn-danger">
       Close
@@ -70,7 +79,7 @@ function visionFramePrincipal(e) {
       <iframe
         width="100%"
         height="100%"
-        src="https://www.youtube.com/embed/2UCBbcBT5Es?autoplay=1"
+        :src="'https://www.youtube.com/embed/' + resultSearch + '?autoplay=1'"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -115,7 +124,10 @@ function visionFramePrincipal(e) {
           @click="visionFrameSmall(true)"
           class="right-bottom-2 neon-border margin-20"
         >
-          <div v-if="!showVideoSmall" class="d-flex justify-content-center width-100">
+          <div
+            v-if="!showVideoSmall"
+            class="d-flex justify-content-center width-100"
+          >
             <img
               src="https://borsarionline.b-cdn.net/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/d/j/dj-202_main.jpg"
               class="thumbnail width-100"
