@@ -17,7 +17,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #000;
+  background-image: url("https://static.vecteezy.com/system/resources/thumbnails/007/233/624/small_2x/brick-black-wall-texture-background-dark-brickwork-pattern-block-stone-structure-backdrop-dark-brick-wall-realistic-template-abstract-modern-wallpaper-design-illustration-vector.jpg");
 }
 
 /* header  section*/
@@ -367,17 +367,49 @@ body {
   .left {
     height: 400px;
   }
-  .right-top,.right-bottom {
+  .right-top,
+  .right-bottom {
     flex-direction: column;
-     justify-content: center;
+    justify-content: center;
     align-items: center;
     height: auto;
   }
 
-  .right-top-1,.right-top-2,.right-bottom-1,.right-bottom-2{
-    width: 100%;
+  .right-top-1,
+  .right-top-2,
+  .right-bottom-1,
+  .right-bottom-2 {
+    width: 300px;
+    height: 200px;
   }
-  .right-bottom-1,.right-bottom-1{
+  /* .right-bottom-1,
+  .right-bottom-1 {
     height: 300px;
+  } */
+  .neonText {
+    font-size: 16px;
+    letter-spacing: 7px;
+  }
+  .left {
+    width: 300px;
+    height: 200px;
+  }
+  .testo {
+    font-size: 75%;
+  }
+  .testo h3 {
+    margin-bottom: 10px;
+  }
+  .videoYoutube {
+    height: 50%;
+    width: 85%;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  .arrow{
+    display: none;
+  }
+  .loader-text{
+    text-align: center;
   }
 }

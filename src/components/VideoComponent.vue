@@ -31,7 +31,7 @@ function visionFramePrincipal(e) {
     <iframe
       width="100%"
       height="415"
-      src="https://www.youtube.com/embed/m_GoB8SFOeM?si=xPezaIvI1v_R2Nk-"
+      src="https://www.youtube.com/embed/m_GoB8SFOeM?autoplay=1"
       title="YouTube video player"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -67,7 +67,7 @@ function visionFramePrincipal(e) {
       <iframe
         width="100%"
         height="100%"
-        src="https://www.youtube.com/embed/LxsT5bYUhbM?si=4FPqB9gIYCzGjDcb"
+        src="https://www.youtube.com/embed/2UCBbcBT5Es?autoplay=1"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -95,7 +95,7 @@ function visionFramePrincipal(e) {
         </div>
         <div class="right-top-2 margin-20">
           <div class="testo neon-border">
-            <h3 style="margin: 0">Sunset Deep House Mix</h3>
+            <h3>Sunset Deep House Mix</h3>
             <p>
               Afro House, deep, melodic, tech, funky, organic, groovy house mix
               by Maldo para dejar de fondo incluyendo temas de Adam Port,
@@ -112,7 +112,7 @@ function visionFramePrincipal(e) {
           @click="visionFrameSmall(true)"
           class="right-bottom-2 neon-border margin-20"
         >
-          <div v-if="!showVideoSmall" class="d-flex justify-content-center">
+          <div v-if="!showVideoSmall" class="d-flex justify-content-center width-100">
             <img
               src="https://borsarionline.b-cdn.net/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/d/j/dj-202_main.jpg"
               class="thumbnail width-100"
@@ -123,7 +123,7 @@ function visionFramePrincipal(e) {
             v-else
             width="100%"
             height="100%"
-            src="https://www.youtube.com/embed/LxsT5bYUhbM?si=4FPqB9gIYCzGjDcb"
+            src="https://www.youtube.com/embed/LxsT5bYUhbM?autoplay=1"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
