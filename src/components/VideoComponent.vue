@@ -1,5 +1,7 @@
 <script setup>
 import { ref } from "vue";
+import SearchComponent from "./SearchComponent.vue";
+
 
 let showVideo = ref(false);
 let showVideoSmall = ref(false);
@@ -24,6 +26,7 @@ function visionFramePrincipal(e) {
 </script>
 
 <template>
+    <SearchComponent></SearchComponent>
   <div v-if="showVideo" class="videoYoutube" style="margin-top: 20px">
     <button @click="visionFrame(false)" type="button" class="btn btn-danger">
       Close
